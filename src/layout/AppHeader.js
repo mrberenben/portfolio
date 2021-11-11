@@ -6,10 +6,10 @@ import css from './AppHeader.module.css';
 import Container from './Container';
 
 const ROUTES = [
-  { id: 0, title: 'About Me', path: '/portfolio' },
-  { id: 1, title: 'Works', path: '/works' },
-  { id: 2, title: 'Comments', path: '/comments' },
-  { id: 3, title: 'Contact', path: '/contact' }
+  { id: 0, title: 'About Me', path: '/portfolio/' },
+  { id: 1, title: 'Works', path: '/portfolio/works' },
+  { id: 2, title: 'Comments', path: '/portfolio/comments' },
+  { id: 3, title: 'Contact', path: '/portfolio/contact' }
 ]
 
 export default function AppHeader() {
