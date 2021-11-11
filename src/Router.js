@@ -15,7 +15,7 @@ export default function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/portfolio" element={<Index />}>
-          <Route path="/" element={<AboutMe />} />
+          <Route index element={<AboutMe />} />
           <Route path="works" element={<Works />} />
           <Route path="comments" element={<Comments />} />
           <Route path="contact" element={<Contact />} />
