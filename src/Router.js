@@ -14,7 +14,7 @@ export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/portfolio" element={<Index />}>
+        <Route path="/portfolio/" element={<Index />}>
           <Route index element={<AboutMe />} />
           <Route path="works" element={<Works />} />
           <Route path="comments" element={<Comments />} />
