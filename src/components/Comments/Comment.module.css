@@ -1,0 +1,54 @@
+.comment {
+  display: flex; flex: 1;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.writer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem; height: 3rem;
+  border-radius: 100%;
+  background-color: var(--dark-secondary);
+  margin-right: 1.5rem;
+  font-size: 1rem;
+}
+
+.commentInner {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-tertiary);
+}
+
+.commentInner p { margin-bottom: 0 }
+
+.writerName {
+  color: var(--light-primary);
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.deleteComment {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  color: var(--gray-secondary);
+  margin-top: 1rem;
+  -webkit-transition: 150ms color ease;
+  transition: 150ms color ease;
+}
+.deleteComment:hover { color: var(--primary) }
+
+@media screen and (max-width: 768px) {
+  .writer { 
+    display: none;
+  }
+  .commentInner {
+    padding: 1rem;
+  }
+}

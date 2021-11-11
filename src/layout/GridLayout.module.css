@@ -1,0 +1,11 @@
+.gridLayout {
+  position: relative;
+  display: grid;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .gridLayout {
+    grid-template-columns: 1fr !important;
+  }
+}
