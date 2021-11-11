@@ -20,7 +20,7 @@ export default function Router() {
         <Route path="/portfolio/works" element={<Works />} />
         <Route path="/portfolio/comments" element={<Comments />} />
         <Route path="/portfolio/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/portfolio/*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
