@@ -1,0 +1,20 @@
+.notFound {
+  display: flex; flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vw;
+  font-weight: 900;
+  color: var(--dark-secondary);
+  text-shadow: 6px 6px black;
+}
+
+a {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .notFound {
+    font-size: 6rem;
+  }
+}

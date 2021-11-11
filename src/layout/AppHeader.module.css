@@ -1,0 +1,112 @@
+.appHeader {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  padding: .75rem 0;
+  z-index: 10;
+}
+
+.headerWrapper {
+  display: flex; flex: 1;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.appLogo {
+  display: flex;
+  font-size: 1rem;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--light-primary);
+  text-shadow: 2px 2px black;
+  user-select: none;
+}
+
+.appNavigation {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.route {
+  display: flex;
+  padding: .75rem 1.25rem;
+  margin: 0 .25rem;
+  color: var(--gray-primary);
+  --webkit-transition: 150ms color var(--transition-custom);
+  transition: 150ms color var(--transition-custom);
+}
+
+.route:last-child { margin-right: 0 }
+
+.route:not(.routeActive):hover {
+  color: var(--light-tertiary);
+}
+
+.routeActive {
+  color: var(--light-primary);
+}
+
+.mobileNavigation {
+  display: none;
+}
+
+.mobileNavigationButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px; height: 50px;
+  z-index: 10;
+}
+
+.mobileNavigationButton span {
+  display: flex;
+  width: 2.25rem; height: 2px;
+  background-color: var(--light-primary);
+  -webkit-transition: 400ms transform ease;
+  transition: 400ms transform ease;
+  -webkit-transition-delay: 100ms;
+  transition-delay: 100ms;
+}
+.mobileNavigationButton span:first-child {
+  margin-bottom: 6px;
+}
+.mobileNavigation.active span:first-child {
+  -webkit-transform: translateX(-6px);
+  transform: translateX(-6px);
+}
+.mobileNavigation.active span:last-child {
+  -webkit-transform: translateX(6px);
+  transform: translateX(6px);
+}
+
+.mobileNavigationMenu {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  background-color: var(--dark-primary);
+  z-index: 9;
+  overflow: hidden;
+  -webkit-transition: 900ms transform var(--transition-custom);
+  transition: 900ms transform var(--transition-custom);
+  -webkit-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+}
+.mobileNavigation.active .mobileNavigationMenu {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.mobileNavigationRoutes {
+  display: flex; flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .appNavigation { display: none }
+  .mobileNavigation { display: flex }
+}

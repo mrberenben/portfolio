@@ -1,0 +1,36 @@
+.formRow {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.formLabel { margin-bottom: .5rem }
+
+.formInput {
+  background-color: transparent;
+  border: 1px solid var(--dark-tertiary);
+  padding: 1rem;
+  color: var(--light-primary);
+  font: inherit;
+}
+
+.formTextArea {
+  background-color: transparent;
+  border: 1px solid var(--dark-tertiary);
+  padding: 1rem;
+  color: var(--light-primary);
+  height: 120px;
+  resize: none;
+}
+
+.formInput, .formTextArea {
+  -webkit-transition: 150ms border-color ease;
+  transition: 150ms border-color ease;
+}
+.formInput:focus, .formTextArea:focus {
+  border-color: var(--gray-secondary)
+}
+
+option {
+  background-color: var(--dark-primary);
+}
